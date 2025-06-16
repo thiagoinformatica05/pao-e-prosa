@@ -1,0 +1,285 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:'Roboto', sans-serif;
+  font-size: 17px;
+  color: #2E1D13;
+  background-color: #FFF8F2;
+  background-image: url('../img/textura-papel-claro.webp');
+  background-repeat: repeat;
+  background-size:cover;
+  line-height: 1.65;
+  transition: all 0.3s ease-in-out;
+}
+
+
+header {
+  background-color: #63361e;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.banner {
+     border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    margin-top: 60px;
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('../img/pao-banner.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+ 
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.slogan {
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  border-radius: 12px;
+  animation: aparecer 1.2s ease forwards;
+  opacity: 0;
+  
+}
+
+.slogan h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.slogan p {
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+#sobre {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#sobre img {
+  max-width: 100%;
+  width: 600px;  /* ou menos, se quiser menor */
+  height: auto;
+  display: block;
+  margin: 40px auto 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+@keyframes aparecer {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+section {
+  padding: 40px 20px;
+  max-width: 960px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #8b4e2e;
+}
+
+.grid-produtos {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
+}
+
+.produto img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.produto h3 {
+  margin-top: 10px;
+  color: #8b4e2e;
+}
+
+#contato {
+max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff9f4;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+#contato p {
+  font-size: 1.1rem;
+  color: #4A3324;
+  margin-bottom: 12px;
+}
+#contato h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  color: #8B4E2E;
+  margin-bottom: 20px;
+}
+
+#contato img {
+ max-width: 100%;
+  width: 500px;
+  height: auto;
+  border-radius: 12px;
+  margin: 30px auto;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+footer {
+  background-color: #2E1D13;
+  color: #fff7ee;
+  padding: 40px 20px;
+  font-size: 0.95rem;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+}
+
+.rodape-container a {
+  color: #FFD7A3;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.rodape-container a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+
+#voltar-topo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.8); /* botão claro com leve transparência */
+
+  border: 2px solid #8B4E2E;
+  border-radius: 50%;
+  padding: 14px 16px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+#voltar-topo.visivel {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#voltar-topo:hover {
+  background-color: #8B4E2E;
+ 
+}
+#voltar-topo svg {
+  display: block;
+  margin: auto;
+}
+@keyframes subirLeve {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#voltar-topo.visivel {
+  animation: subirLeve 0.3s ease;
+}
+
+
+/* Responsividade */
+@media (min-width: 700px) {
+  .grid-produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .slogan {
+    max-width: 400px;
+  }
+
+
+
+}
